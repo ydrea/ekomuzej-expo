@@ -9,7 +9,7 @@ export default function App() {
 		<View style={styles.container}>
 			<Navigation />
 			<SafeAreaView>
-				<Text>Alo medo!</Text>
+				<Text>medo i zeko</Text>
 			</SafeAreaView>
 			<StatusBar style='auto' />
 		</View>
