@@ -6,9 +6,9 @@ import YDrawer from './comps/YDrawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import YAppbar from './comps/YAppbar';
 //
-// const stackScreenOptions = {
-// 	header: props => <YAppbar {...props} />,
-// };
+const stackScreenOptions = {
+	header: props => <YAppbar {...props} />,
+};
 //
 const MedoStack = createNativeStackNavigator();
 const Medo = () => {
@@ -16,7 +16,7 @@ const Medo = () => {
 		<MedoStack.Navigator
 			// screenOptions={stackScreenOptions}
 			screenOptions={{
-				header: props => <YAppbar {...props} />,
+				header: props => <YAppbar {...props} back={false} />,
 			}}
 		>
 			<MedoStack.Screen
@@ -44,7 +44,7 @@ const Zeko = () => {
 		<ZekoStack.Navigator
 			// screenOptions={stackScreenOptions}
 			screenOptions={{
-				header: props => <YAppbar {...props} />,
+				header: props => <YAppbar {...props} back={true} />,
 			}}
 		>
 			<ZekoStack.Screen
