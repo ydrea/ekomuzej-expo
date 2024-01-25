@@ -2,7 +2,7 @@ import { DrawerContentScrollView } from '@react-navigation/drawer';
 import { Drawer, withTheme } from 'react-native-paper';
 // import { useToken } from '../data/token';
 
-function CustomNavigationDrawer({ theme, ...navProps }) {
+function YDrawer({ theme, ...navProps }) {
 	const { state, navigation } = navProps;
 	// const { isLoggedIn, clearToken } = useToken();
 
@@ -24,13 +24,13 @@ function CustomNavigationDrawer({ theme, ...navProps }) {
 				<Drawer.Item
 					key={route.key}
 					label={route.name}
-					// accessibilityLabel={route.name}
+					accessibilityLabel={route.name}
 					active={isActive(index)}
 					onPress={() => navigation.navigate(route.name)}
 				/>
 			))}
 
-			<Drawer.Item label='Sign out' onPress={signOut} />
+			<Drawer.Item label='Sign out' onPress={signOut} icon='logout' />
 			{/* {isLoggedIn && (
 				<Drawer.Item label='Sign out' onPress={signOut} />
 			)} */}
@@ -38,4 +38,4 @@ function CustomNavigationDrawer({ theme, ...navProps }) {
 	);
 }
 
-export default withTheme(CustomNavigationDrawer);
+export default withTheme(YDrawer);

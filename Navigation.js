@@ -2,8 +2,34 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { Text } from 'react-native';
 import { Button } from 'react-native-paper';
+import YDrawer from './comps/YDrawer';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import YAppbar from './comps/YAppbar';
 //
-export const Medo = () => {
+// const stackScreenOptions = {
+// 	header: props => <YAppbar {...props} />,
+// };
+//
+const MedoStack = createNativeStackNavigator();
+const Medo = () => {
+	return (
+		<MedoStack.Navigator
+			// screenOptions={stackScreenOptions}
+			screenOptions={{
+				header: props => <YAppbar {...props} />,
+			}}
+		>
+			<MedoStack.Screen
+				name='MedoDetail'
+				component={MedoDetail}
+				options={{ title: 'MEDO' }}
+			/>
+		</MedoStack.Navigator>
+	);
+};
+//
+const MedoDetail = () => {
+	console.log('fubar');
 	return (
 		<>
 			<Text>Alo Medo!</Text>
@@ -12,7 +38,26 @@ export const Medo = () => {
 	);
 };
 //
-export const Zeko = () => {
+const ZekoStack = createNativeStackNavigator();
+const Zeko = () => {
+	return (
+		<ZekoStack.Navigator
+			// screenOptions={stackScreenOptions}
+			screenOptions={{
+				header: props => <YAppbar {...props} />,
+			}}
+		>
+			<ZekoStack.Screen
+				name='ZekoDetail'
+				component={ZekoDetail}
+				options={{ title: 'ZEKO' }}
+			/>
+		</ZekoStack.Navigator>
+	);
+};
+
+//
+const ZekoDetail = () => {
 	return (
 		<>
 			<Text>Alo Zeko!</Text>
@@ -25,7 +70,10 @@ const Drawer = createDrawerNavigator();
 
 export const NavigationContents = () => {
 	return (
-		<Drawer.Navigator screenOptions={{ headerShown: true }}>
+		<Drawer.Navigator
+			screenOptions={{ headerShown: false }}
+			drawerContent={props => <YDrawer {...props} />}
+		>
 			<Drawer.Screen name='medo' component={Medo} />
 			<Drawer.Screen name='zeko' component={Zeko} />
 		</Drawer.Navigator>

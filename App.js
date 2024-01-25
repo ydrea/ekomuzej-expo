@@ -4,22 +4,33 @@ import { SafeAreaView } from 'react-native-web';
 import 'react-native-gesture-handler';
 import Navigation from './Navigation';
 
+import { DefaultTheme, PaperProvider } from 'react-native-paper';
+
+const theme = {
+	...DefaultTheme,
+	colors: {
+		...DefaultTheme.colors,
+		primary: '#b71c1c',
+	},
+};
+
+//
 export default function App() {
 	return (
-		<View style={styles.container}>
+		<PaperProvider theme={theme}>
 			<Navigation />
 			<SafeAreaView>
 				<Text>medo i zeko</Text>
 			</SafeAreaView>
 			<StatusBar style='auto' />
-		</View>
+		</PaperProvider>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#6babab',
+		backgroundColor: '#cbcbcb',
 		// alignItems: 'center',
 		justifyContent: 'center',
 	},
