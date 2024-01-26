@@ -6,9 +6,9 @@ import YDrawer from './comps/YDrawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import YAppbar from './comps/YAppbar';
 //
-const stackScreenOptions = {
-	header: props => <YAppbar {...props} />,
-};
+// const stackScreenOptions = {
+// 	header: props => <YAppbar {...props} />,
+// };
 //
 const MedoStack = createNativeStackNavigator();
 const Medo = () => {

@@ -5,6 +5,7 @@ import 'react-native-gesture-handler';
 import Navigation from './Navigation';
 
 import { DefaultTheme, PaperProvider } from 'react-native-paper';
+import useTheme from './useTheme';
 
 const theme = {
 	...DefaultTheme,
@@ -16,6 +17,7 @@ const theme = {
 
 //
 export default function App() {
+	const theme = useTheme();
 	return (
 		<PaperProvider theme={theme}>
 			<Navigation />
@@ -29,7 +31,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
+		// flex: 1,
 		backgroundColor: '#cbcbcb',
 		// alignItems: 'center',
 		justifyContent: 'center',
