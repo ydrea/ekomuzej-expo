@@ -7,24 +7,16 @@ import Navigation from './Navigation';
 import { DefaultTheme, PaperProvider } from 'react-native-paper';
 import useTheme from './useTheme';
 
-const theme = {
-	...DefaultTheme,
-	colors: {
-		...DefaultTheme.colors,
-		primary: '#b71c1c',
-	},
-};
-
 //
 export default function App() {
 	const theme = useTheme();
 	return (
 		<PaperProvider theme={theme}>
 			<Navigation />
-			<SafeAreaView>
-				<Text>medo i zeko</Text>
-			</SafeAreaView>
+			{/* <SafeAreaView> */}
+			<Text>medo i zeko</Text>
 			<StatusBar style='auto' />
+			{/* </SafeAreaView> */}
 		</PaperProvider>
 	);
 }
