@@ -7,7 +7,10 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest"
+    "test": "jest",
+    "build:ios": "eas build --platform ios --local",
+    "build:ios:remote": "eas build --platform ios",
+    "deploy:web": "expo export:web && cp _redirects web-build && netlify deploy --prod"
   },
   "dependencies": {
     "@expo/metro-runtime": "^3.1.1",
