@@ -5,6 +5,7 @@ import { Button } from 'react-native-paper';
 import YDrawer from './comps/YDrawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import YAppbar from './comps/YAppbar';
+import Map from './pages/Map';
 //
 // const stackScreenOptions = {
 // 	header: props => <YAppbar {...props} />,
@@ -76,6 +77,8 @@ export const NavigationContents = () => {
 		>
 			<Drawer.Screen name='medo' component={Medo} />
 			<Drawer.Screen name='zeko' component={Zeko} />
+
+			<Drawer.Screen name='map' component={Map} />
 		</Drawer.Navigator>
 	);
 };

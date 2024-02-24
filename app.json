@@ -21,16 +21,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ydrea.ekomuzej"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "c9f6b283-ba3d-452d-b07c-e9b2fd5a4651"
+        "projectId": "f61f45cb-bae7-4be0-b0c9-9f811fdc2e85"
       }
     },
-    "owner": "ydrea"
+    "owner": "ydrea",
+    "plugins": [
+      "react-native-health"
+    ]
   }
 }
