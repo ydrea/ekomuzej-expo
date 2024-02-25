@@ -5,6 +5,10 @@
     "build": {
       "development": {
         "developmentClient": true,
+        "env": {
+          "EXPO_PUBLIC_GOOGLE_MAPS_API_KEY":"AIzaSyD4HbRzt0gL8yWCgS7p1xXXERy6Na7o910"
+        },
+        
         "distribution": "internal"
       },
       "preview": {
