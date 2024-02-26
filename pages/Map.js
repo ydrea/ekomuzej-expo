@@ -1,5 +1,5 @@
 import * as React from 'react';
-import MapView from 'react-native-maps';
+import MapView from '../components/ymap'
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
 export default function Map() {
