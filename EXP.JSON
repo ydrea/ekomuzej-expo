@@ -1,0 +1,10 @@
+{
+"android": {
+    "package": "ekomuzej",
+    "config": {
+      "googleMaps": {
+        "apiKey": "AIzaSyDQCwlZjx4PUJs6M2Gbbz4WEsGwjFe0opM"
+      }
+    }
+  }	 }
+  

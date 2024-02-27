@@ -5,6 +5,7 @@ import { Button } from 'react-native-paper';
 import YDrawer from './comps/YDrawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import YAppbar from './comps/YAppbar';
+import Map from './maps/Map';
 //
 // const stackScreenOptions = {
 // 	header: props => <YAppbar {...props} />,
@@ -22,7 +23,7 @@ const Medo = () => {
 			<MedoStack.Screen
 				name='MedoDetail'
 				component={MedoDetail}
-				options={{ title: 'MEDO' }}
+				options={{ title: 'medo' }}
 			/>
 		</MedoStack.Navigator>
 	);
@@ -50,7 +51,7 @@ const Zeko = () => {
 			<ZekoStack.Screen
 				name='ZekoDetail'
 				component={ZekoDetail}
-				options={{ title: 'ZEKO' }}
+				options={{ title: 'zeko' }}
 			/>
 		</ZekoStack.Navigator>
 	);
@@ -65,7 +66,35 @@ const ZekoDetail = () => {
 		</View>
 	);
 };
+//
 
+const MapStack = createNativeStackNavigator();
+const Mapa = () => {
+	return (
+		<MapStack.Navigator
+			// screenOptions={stackScreenOptions}
+			screenOptions={{
+				header: props => <YAppbar {...props} back={true} />,
+			}}
+		>
+			<MapStack.Screen
+				name='MapaDetail'
+				component={MapDetail}
+				options={{ title: 'mapa' }}
+			/>
+		</MapStack.Navigator>
+	);
+};
+
+//
+const MapDetail = () => {
+	return (
+		<View>
+			<Map/>
+		</View>
+	);
+};
+//
 const Drawer = createDrawerNavigator();
 
 export const NavigationContents = () => {
@@ -76,6 +105,7 @@ export const NavigationContents = () => {
 		>
 			<Drawer.Screen name='medo' component={Medo} />
 			<Drawer.Screen name='zeko' component={Zeko} />
+			<Drawer.Screen name='mapa' component={Mapa} />
 		</Drawer.Navigator>
 	);
 };
