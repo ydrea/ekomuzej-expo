@@ -25,7 +25,7 @@
       "config":{"googleMaps":{"apiKey": "AIzaSyDQCwlZjx4PUJs6M2Gbbz4WEsGwjFe0opM" }}
     },
     "web": {
-
+"bundler": "metro",
       "favicon": "./assets/favicon.png"
     },
     "extra": {
