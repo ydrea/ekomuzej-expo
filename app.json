@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "config":{"googleMaps":{"apiKey": "AIzaSyDQCwlZjx4PUJs6M2Gbbz4WEsGwjFe0opM" }}
+      "config":{"googleMaps":{"apiKey": "GOOGLE_MAPS_API_KEY" }}
     },
     "web": {
 "bundler": "metro",
