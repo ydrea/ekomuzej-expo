@@ -1,0 +1,17 @@
+{
+  "cli": {
+    "version": ">= 7.3.0"
+  },
+
+
+      "build": {
+        "dev": {
+          "android": {
+            "buildType": "apk",
+            "gradleCommand": ":app:assembleRelease",
+            "developmentClient": true,         
+             "distribution": "internal"
+
+          }
+        } }
+    }

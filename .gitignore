@@ -31,8 +31,15 @@ yarn-error.*
 # local env files
 .env*.local
 .env
+EXP.JSON
 # typescript
 *.tsbuildinfo
 
 # Local Netlify folder
 .netlify
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build

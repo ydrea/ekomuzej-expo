@@ -1,3 +1,4 @@
+
 {
 "android": {
     "package": "ekomuzej",
@@ -6,5 +7,10 @@
         "apiKey": ""
       }
     }
-  }	 }
+  }	,
+
+  "eas": {
+    "projectId": "c9f6b283-ba3d-452d-b07c-e9b2fd5a4651"
+  }
+}
   
