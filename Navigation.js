@@ -68,32 +68,33 @@ const ZekoDetail = () => {
 };
 //
 
-const MapStack = createNativeStackNavigator();
-const Mapa = () => {
-	return (
-		<MapStack.Navigator
-			// screenOptions={stackScreenOptions}
-			screenOptions={{
-				header: props => <YAppbar {...props} back={true} />,
-			}}
-		>
-			<MapStack.Screen
-				name='MapaDetail'
-				component={MapDetail}
-				options={{ title: 'mapa' }}
-			/>
-		</MapStack.Navigator>
-	);
-};
+// const MapStack = createNativeStackNavigator();
+// const Mapa = () => {
+// 	return (
+// 		<MapStack.Navigator
+// 			// screenOptions={stackScreenOptions}
+// 			screenOptions={{
+// 				header: props => <YAppbar {...props} back={true} />,
+// 			}}
+// 		>
+// 			<MapStack.Screen
+// 				name='MapaDetail'
+// 				component={MapDetail}
+// 				options={{ title: 'mapa' }}
+// 			/>
+// 		</MapStack.Navigator>
+// 	);
+// };
 
 //
-const MapDetail = () => {
-	return (
-		<View>
-			<Map/>
-		</View>
-	);
-};
+// const MapDetail = () => {
+// 	return (
+// 		<View>
+// 			<Map/>
+// 		</View>
+// 	);
+// };
+
 //
 const Drawer = createDrawerNavigator();
 
@@ -105,7 +106,7 @@ export const NavigationContents = () => {
 		>
 			<Drawer.Screen name='medo' component={Medo} />
 			<Drawer.Screen name='zeko' component={Zeko} />
-			<Drawer.Screen name='mapa' component={Mapa} />
+			{/* <Drawer.Screen name='mapa' component={Mapa} /> */}
 		</Drawer.Navigator>
 	);
 };
