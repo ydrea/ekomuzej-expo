@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.c {
+margin: 2em;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.veleb {
+position: absolute;
+top: 40%;
+}
+.veleb img {
+z-index: 0;
+display: block;
+}
+
+.container {
+  /* z-index: 1; */
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    /* gap: .5em; */
+    grid-template-rows: repeat(5, 100px);
+}
+
+.container div {
+    aspect-ratio: 1 !important;
+}
+
+.box {
+  background-color: #03c9fa;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem;
+  z-index: 2;
+border: solid 5px white;
+}
+
+.box.green {
+  background-color: rgb(2, 199, 2);
+  width: 100px;
+height: 100px;
+  margin-top: -15%;
+  margin-left: -15%;
+}
+
+.box.trans {
+  background-color: transparent;
+  width: 100px;
+  border: solid 5px white;
+}
+
+.title {
+    position: absolute;
+    bottom: 34.5%;
+    left: 5.1%;
+    font-size: 6.7rem;
+    color: #fff;
+pointer-events: none;
+z-index: 5;
+}
+
+
+
+
